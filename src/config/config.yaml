@@ -1,0 +1,29 @@
+project: enrichment-prediction
+data-directory-local: /Users/rahulnatarajan/Dropbox/mouse_data
+data-directory-ec2: /home/ubuntu/Dropbox/mouse_data
+
+embedding_dir: embeddings/
+
+pretrained-model: pretrained_model/6-new-12w-0
+
+subset-size: 0.01
+
+random-state: 42
+test-size: 0.2
+
+kmer-size: 6
+kmer-step-size: 1
+max-sequence-length: 512
+
+# model parameters
+scale: True
+
+# methods: [PCA, Isomap, MDS, TSNE]
+dimensionality-reduction: PCA
+isomap-neighbors: 5
+isomap-components: 2
+
+batch-size: 1000
+
+window: False
+sequence-mean: False # if False, use embeddings of invidual kmers instead of average
